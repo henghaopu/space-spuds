@@ -1,0 +1,110 @@
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+html {
+    /*font-family: 'Mukta Vaani', 'Open Sans', sans-serif;*/
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Istok Web', sans-serif;
+    font-feature-settings: "tnum";
+    font-size: 16px;
+    /* 0.35rem * 4 */
+    line-height: 1.4rem;   
+}
+
+h1 {
+    /* font-size: 1.68rem;
+    line-height: 1.15em; */
+    font-size: 2.13rem;
+    /* 0.35rem * 7 */
+    line-height: 2.45rem;
+    margin: 1.4rem 0.7rem 0.7rem 0.7rem;
+}
+
+h2 {
+    /* font-size: 1.383rem;
+    line-height: 1.2em; */
+    font-size: 1.75rem;
+    /* 0.35rem * 6 */
+    line-height: 2.1rem;
+    margin: 0.35rem 0 0.35rem 0;
+
+}
+
+h3 {
+    /* font-size: 1.215rem;
+    line-height: 1.25em; */
+    font-size: 1.4rem;
+    /* 0.35rem * 5 */
+    line-height: 1.75rem;
+    margin-bottom: 0.35rem;
+}
+
+
+
+
+body > header {
+    position: relative;
+    height: 5.4rem;
+    border-bottom: 1px solid grey;
+}
+
+header > a:first-child > img {
+    height: 100%;
+    padding: 0.7rem;
+}
+
+header > a:nth-child(2) > img {
+    position: absolute;
+    right: 0.7rem;
+    bottom: 0.7rem;
+    height: 50%;
+}
+
+
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px,1fr));    
+}
+
+section {
+    position: relative;
+    border: 1px solid lightgrey;
+    margin: 0 0.7rem 0.7rem 0.7rem;
+    padding: 0.35rem;
+}
+
+ul {
+    padding-left: 1.4rem;
+}
+
+li {
+    list-style-position: outside;
+}
+
+section > a {
+    display: block;
+    border: 1px solid grey;
+    margin: 0.7rem 1.4rem;
+    padding: 0.7rem;
+    text-align: center;
+}
+
+section img {
+    position: absolute;
+    top: 0.35rem;
+    right: 0.35rem;
+    width: 28%;
+}
