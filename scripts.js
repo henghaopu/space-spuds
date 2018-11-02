@@ -2,6 +2,7 @@ let vm = new Vue({
     el: '#root',
     data: {
         shoppingCartCounter: 0,
+        mealCounters: { "Plutine": 0, "Astrotots": 0, "Meateor": 0, "Spudnik": 0, "Solo Mission": 0, "Rocket Fuel": 0 },
         mealsInCart: [],
         isCartClicked: false,
         totalPrice: 0,
@@ -15,14 +16,31 @@ let vm = new Vue({
     },
     methods: {
         addToCart() {
+            var mealName = event.target.parentNode.children[0].innerHTML;
+            var mealPrice = event.target.parentNode.children[1].innerHTML.substring(1);
+            
             this.shoppingCartCounter++;
-            var priceWith$ = event.target.parentNode.children[1].innerHTML;
-            this.mealsInCart.push({
-                Name: event.target.parentNode.children[0].innerHTML, 
-                Price: priceWith$
-            });
-            // console.log(this.mealsInCart);
-            this.totalPrice = (Number(this.totalPrice) + Number(priceWith$.substring(1))).toFixed(2);
+            this.mealCounters[mealName]++;
+
+            if (this.mealCounters[mealName] === 1) {
+                // item that added in the first time
+                this.mealsInCart.push({
+                    name: mealName, 
+                    quantity: this.mealCounters[mealName],
+                    price: mealPrice
+                });
+            } else {
+                // change values of an object that inside an array
+                for (var i in this.mealsInCart) {
+                    if (this.mealsInCart[i].name === mealName) {
+                        this.mealsInCart[i].quantity++;
+                        this.mealsInCart[i].price = (Number(this.mealsInCart[i].price) + Number(mealPrice)).toFixed(2);
+                        break;
+                    }
+                }
+            }
+            
+            this.totalPrice = (Number(this.totalPrice) + Number(mealPrice)).toFixed(2);
         },
         showCart() {
             this.isCartClicked = true;

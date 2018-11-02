@@ -14,17 +14,9 @@
             <div>
                 <a @click="showCart" v-cloak>{{shoppingCartCounter}}</a>
                 <a><img @click="showCart" src="images/cart-of-ecommerce.svg" alt="Shopping Cart"></a>
+                <!-- credit -->
+                <div style="display:none;">Icons made by <a href="https://www.flaticon.com/authors/designerz-base" title="Designerz Base">Designerz Base</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
             </div>
-            <!-- credit
-            cart-of-ecommerce.svg:
-            <div>Icons made by <a href="https://www.flaticon.com/authors/designerz-base" title="Designerz Base">Designerz Base</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-            shopping-cart.svg:
-            <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-            shopping-cart2.svg:
-            <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-            shopping-cart3.svg:
-            <div>Icons made by <a href="https://www.flaticon.com/authors/puppets" title="Puppets">Puppets</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-        -->
         </header>
         <main>
             <div v-if="!isCartClicked">
@@ -150,11 +142,11 @@
                                 <li><input type="radio" name="fuel" value="Bottled Water" v-model="fuel">Bottled Water</li>
                                 <li><input type="radio" name="fuel" value="Pepsi" v-model="fuel">Pepsi</li>
                                 <li><input type="radio" name="fuel" value="Diet Pepsi" v-model="fuel">Diet Pepsi</li>
-                                <li><input type="radio" name="fuel" value="Pepsi Zero Sugar" v-model="fuel">Pepsi Zero Sugar</li>
-                                <li><input type="radio" name="fuel" value="Pepsi Wild Cherry" v-model="fuel">Pepsi Wild Cherry</li>
-                                <li><input type="radio" name="fuel" value="Mountain Due" v-model="fuel">Mountain Due</li>
-                                <li><input type="radio" name="fuel" value="Diet Mountain Due" v-model="fuel">Diet Mountain Due</li>
-                                <li><input type="radio" name="fuel" value="Root Beer" v-model="fuel">Root Beer</li>
+                                <li><input type="radio" name="fuel" value="Ginger Ale" v-model="fuel">Ginger Ale</li>
+                                <li><input type="radio" name="fuel" value="Dr Pepper" v-model="fuel">Dr Pepper</li>
+                                <li><input type="radio" name="fuel" value="Mtn Due" v-model="fuel">Mtn Due</li>
+                                <li><input type="radio" name="fuel" value="Tropicana" v-model="fuel">Tropicana</li>
+                                <li><input type="radio" name="fuel" value="Brisk Iced Tea" v-model="fuel">Brisk Iced Tea</li>
                             </ul>
                         </form>
                         <a @click="addToCart">ADD TO CART</a>
@@ -172,9 +164,9 @@
                         </tr>
                         <tr v-for="meal in mealsInCart">
                             <!-- <td><a>x</a></td> -->
-                            <td v-text="meal['Name']"></td>
-                            <td><input type="number" value="1" min="0" max="99" disabled></td>
-                            <td v-text="meal['Price']"></td>
+                            <td v-text="meal['name']"></td>
+                            <td><input type="number" v-model="meal['quantity']" min="0" max="99" disabled></td>
+                            <td>${{meal['price']}}</td>
                         </tr> 
                     </table>
                 </div>
