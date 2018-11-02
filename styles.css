@@ -61,7 +61,7 @@ h3 {
 body > div > header {
     position: relative;
     height: 5.4rem;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid lightgray;
 }
 
 header > a:first-child > img {
@@ -82,7 +82,7 @@ header > div > a > img {
 
 header > div > a:first-child {
     position: absolute;
-    top: -0.85rem;
+    top: -0.88rem;
     right: 0.05rem;
     border: 1px solid grey;
     width: 1.8rem;
@@ -102,6 +102,10 @@ header > div > a:first-child {
 .wrapper {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(300px,1fr));    
+}
+
+.wrapper > section > p {
+    font-size: 1.12rem;
 }
 
 section {
@@ -157,6 +161,32 @@ section img {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.2s ease-out;
+}
+
+form > ul {
+    padding: 0;
+}
+
+form > ul > li {
+    list-style-type: none;
+}
+
+form input {
+    margin-right: 0.35rem;
+}
+
+.wrapper > section:nth-child(5) > ul {
+    /* credit */
+    /* <div>Icons made by <a href="https://www.flaticon.com/authors/hanan" title="Hanan">Hanan</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
+    list-style-image: url(images/add.svg);
+}
+
+form > ul {
+    list-style-image: none;
+}
+
+.wrapper > section:last-child li {
+    text-indent: 0.35rem;
 }
 
 /*

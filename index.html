@@ -77,76 +77,86 @@
                     </section>   
                     <section>
                         <h2>Solo Mission</h2>
+                        <p></p>
                         <ul>
                             <li>
-                                <div class="accordion">
+                                <div >
                                     <h3>Choose Your Planetary Scale</h3>
-                                    <p>(pick ONE, from $4.99 to $6.99)</p>
                                 </div>
-                                <ul class="panel">
-                                    <li>Moon (8oz) $4.99</li>
-                                    <li>Earth (10oz) $5.99</li>
-                                    <li>Sun (12oz) $6.99</li>
-                                </ul>
+                                <form @submit.prevent="">
+                                    <ul>
+                                        <li><input type="radio" name="scale">Moon (8oz) $4.99</li>
+                                        <li><input type="radio" name="scale">Earth (10oz) $5.99</li>
+                                        <li><input type="radio" name="scale">Sun (12oz) $6.99</li>
+                                    </ul>
+                                </form>
                             </li>
                             <li>
                                 <div class="accordion">
                                     <h3>Choose Your Base</h3>
-                                    <p>(pick ONE)</p>
                                 </div>
-                                <ul class="panel">
-                                    <li>French Fries</li>
-                                    <li>Tater Tots</li>
-                                    <li>Baked Potato</li>
-                                    <li>Mashed Potatoes</li>
-                                </ul>
+                                <form class="panel">
+                                    <ul>
+                                        <li><input type="radio" name="base">French Fries</li>
+                                        <li><input type="radio" name="base">Tater Tots</li>
+                                        <li><input type="radio" name="base">Baked Potato</li>
+                                        <li><input type="radio" name="base">Mashed Potatoes</li>
+                                    </ul>
+                                </form>
                             </li>
                             <li>
                                 <div class="accordion">
                                     <h3>Choose Your Space Debris</h3>
                                     <p>(up to TWO, 50¢ additional)</p>
                                 </div>
-                                <ul class="panel">
-                                    <li>Bacon</li>
-                                    <li>Gravy</li>
-                                    <li>Chili</li>
-                                    <li>Nacho Cheese</li>
-                                    <li>Shredded Cheese</li>
-                                    <li>Cheese Curds</li>
-                                    <li>Butter</li>
-                                    <li>Scallions</li>
-                                    <li>Veggie Mix</li>
-                                    <li>Sour Cream</li>
-                                </ul>
+                                <form class="panel">
+                                    <ul>
+                                        <li><input type="checkbox" name="debris">Bacon</li>
+                                        <li><input type="checkbox" name="debris">Gravy</li>
+                                        <li><input type="checkbox" name="debris">Chili</li>
+                                        <li><input type="checkbox" name="debris">Nacho Cheese</li>
+                                        <li><input type="checkbox" name="debris">Shredded Cheese</li>
+                                        <li><input type="checkbox" name="debris">Cheese Curds</li>
+                                        <li><input type="checkbox" name="debris">Butter</li>
+                                        <li><input type="checkbox" name="debris">Scallions</li>
+                                        <li><input type="checkbox" name="debris">Veggie Mix</li>
+                                        <li><input type="checkbox" name="debris">Sour Cream</li>
+                                    </ul>
+                                </form>
                             </li>
                             <li>
                                 <div class="accordion">
                                     <h3>Choose Your Cosmic Blast</h3>
                                     <p>(pick ONE, 25¢ additional)</p>
                                 </div>
-                                <ul class="panel">
-                                    <li>Mustard</li>
-                                    <li>Hot Sauce</li>
-                                    <li>BBQ Sauce</li>
-                                    <li>Honey Mustard</li>
-                                    <li>Chipotle Mayo</li>
-                                </ul>
+                                <form class="panel">
+                                    <ul>
+                                        <li><input type="checkbox" name="blast">Mustard</li>
+                                        <li><input type="checkbox" name="blast">Hot Sauce</li>
+                                        <li><input type="checkbox" name="blast">BBQ Sauce</li>
+                                        <li><input type="checkbox" name="blast">Honey Mustard</li>
+                                        <li><input type="checkbox" name="blast">Chipotle Mayo</li>
+                                    </ul>
+                                </form>
                             </li>
                         </ul>
                         <a @click="addToCart">ADD TO CART</a>
                     </section> 
                     <section>
                         <h2>Rocket Fuel</h2>
-                        <ul>
-                            <li>Bottled Water</li>
-                            <li>Pepsi</li>
-                            <li>Diet Pepsi</li>
-                            <li>Pepsi Zero Sugar</li>
-                            <li>Pepsi Wild Cherry</li>
-                            <li>Mountain Due</li>
-                            <li>Diet Mountain Due</li>
-                            <li>Root Beer</li>
-                        </ul>
+                        <p>$0.49</p>
+                        <form>
+                            <ul>
+                                <li><input type="radio" name="fuel">Bottled Water</li>
+                                <li><input type="radio" name="fuel">Pepsi</li>
+                                <li><input type="radio" name="fuel">Diet Pepsi</li>
+                                <li><input type="radio" name="fuel">Pepsi Zero Sugar</li>
+                                <li><input type="radio" name="fuel">Pepsi Wild Cherry</li>
+                                <li><input type="radio" name="fuel">Mountain Due</li>
+                                <li><input type="radio" name="fuel">Diet Mountain Due</li>
+                                <li><input type="radio" name="fuel">Root Beer</li>
+                            </ul>
+                        </form>
                         <a @click="addToCart">ADD TO CART</a>
                     </section> 
                 </div>     
