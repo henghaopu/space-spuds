@@ -1,6 +1,6 @@
-
-
-
+/*
+    Reset
+*/
 
 * {
     margin: 0;
@@ -44,16 +44,21 @@ h2 {
 h3 {
     /* font-size: 1.215rem;
     line-height: 1.25em; */
-    font-size: 1.4rem;
+    font-size: 1.12rem;
     /* 0.35rem * 5 */
-    line-height: 1.75rem;
-    margin-bottom: 0.35rem;
+    line-height: 1.4rem;
+    margin: 0.35rem 0 0 0;
 }
 
+[v-cloak] {
+    display: none;
+}
 
+/*
+    Header
+*/
 
-
-body > header {
+body > div > header {
     position: relative;
     height: 5.4rem;
     border-bottom: 1px solid grey;
@@ -64,15 +69,35 @@ header > a:first-child > img {
     padding: 0.7rem;
 }
 
-header > a:nth-child(2) > img {
+header > div {
     position: absolute;
     right: 0.7rem;
     bottom: 0.7rem;
     height: 50%;
 }
 
+header > div > a > img {
+    height: 100%;
+}
 
+header > div > a:first-child {
+    position: absolute;
+    top: -0.85rem;
+    right: 0.05rem;
+    border: 1px solid grey;
+    width: 1.8rem;
+    height: 1.8rem;
+    /* padding-top: 0.1rem; */
+    line-height: 1.9rem;
+    text-align: center;
+    border-radius: 0.9rem;
+    z-index: -1;
+    text-decoration: none;
+}
 
+/*
+    Menu
+*/
 
 .wrapper {
     display: grid;
@@ -100,6 +125,21 @@ section > a {
     margin: 0.7rem 1.4rem;
     padding: 0.7rem;
     text-align: center;
+    background: #E9B73F;
+    color: #1A2E34;
+}
+
+section > a:active {
+    background: rgb(231, 196, 113);
+    color: rgb(38, 61, 68);
+}
+
+section h2 {
+    display: inline-block;
+}
+
+section p {
+    display: inline-block;
 }
 
 section img {
@@ -107,4 +147,63 @@ section img {
     top: 0.35rem;
     right: 0.35rem;
     width: 28%;
+}
+
+.accordion {
+    transition: 0.4s;
+}
+
+.panel { 
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+/*
+    Cart
+*/
+
+.itemsInCartWrapper {
+    margin: 0.7rem;
+}
+
+.itemsInCartWrapper + section {
+    border: 1px solid lightgrey;
+    margin-top: 2.45rem;
+} 
+
+.itemsInCartWrapper + section > p, .itemsInCartWrapper + section > h2 {
+    display: block;
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: 2.1rem;
+    margin: 1.4rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* margin-right won't work */
+    /* margin: 0.7rem; */
+}
+
+th {
+    font-size: 1.12rem;
+    line-height: 2.45rem;
+}
+
+tr {
+    border-bottom: 1px solid lightgrey;
+    text-align: left;
+    line-height: 2.45rem;
+    text-indent: 0.7rem;
+}
+
+td input {
+    font-size: 1rem;
+    font-family: 'Istok Web', sans-serif;
+    font-feature-settings: "tnum";
+    border: 1px solid lightsteelblue;
+    text-indent: 2px;
+    width: 70px;
 }
