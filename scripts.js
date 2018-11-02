@@ -4,7 +4,14 @@ let vm = new Vue({
         shoppingCartCounter: 0,
         mealsInCart: [],
         isCartClicked: false,
-        totalPrice: 0
+        totalPrice: 0,
+        soloMission: {
+            price: '(select a scale)',
+            base: '',
+            debris: [],
+            blast: []
+        },
+        fuel: ''
     },
     methods: {
         addToCart() {
@@ -14,7 +21,7 @@ let vm = new Vue({
                 Name: event.target.parentNode.children[0].innerHTML, 
                 Price: priceWith$
             });
-            console.log(this.mealsInCart);
+            // console.log(this.mealsInCart);
             this.totalPrice = (Number(this.totalPrice) + Number(priceWith$.substring(1))).toFixed(2);
         },
         showCart() {

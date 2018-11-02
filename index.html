@@ -77,7 +77,7 @@
                     </section>   
                     <section>
                         <h2>Solo Mission</h2>
-                        <p></p>
+                        <p v-cloak>{{soloMission.price}}</p>
                         <ul>
                             <li>
                                 <div >
@@ -85,9 +85,9 @@
                                 </div>
                                 <form @submit.prevent="">
                                     <ul>
-                                        <li><input type="radio" name="scale">Moon (8oz) $4.99</li>
-                                        <li><input type="radio" name="scale">Earth (10oz) $5.99</li>
-                                        <li><input type="radio" name="scale">Sun (12oz) $6.99</li>
+                                        <li><input type="radio" name="scale" value="$4.99" v-model="soloMission.price">Moon (8oz) $4.99</li>
+                                        <li><input type="radio" name="scale" value="$5.99" v-model="soloMission.price">Earth (10oz) $5.99</li>
+                                        <li><input type="radio" name="scale" value="$6.99" v-model="soloMission.price">Sun (12oz) $6.99</li>
                                     </ul>
                                 </form>
                             </li>
@@ -97,10 +97,10 @@
                                 </div>
                                 <form class="panel">
                                     <ul>
-                                        <li><input type="radio" name="base">French Fries</li>
-                                        <li><input type="radio" name="base">Tater Tots</li>
-                                        <li><input type="radio" name="base">Baked Potato</li>
-                                        <li><input type="radio" name="base">Mashed Potatoes</li>
+                                        <li><input type="radio" name="base" value="French Fries" v-model="soloMission.base">French Fries</li>
+                                        <li><input type="radio" name="base" value="Tater Tots" v-model="soloMission.base">Tater Tots</li>
+                                        <li><input type="radio" name="base" value="Baked Potato" v-model="soloMission.base">Baked Potato</li>
+                                        <li><input type="radio" name="base" value="Mashed Potatoes" v-model="soloMission.base">Mashed Potatoes</li>
                                     </ul>
                                 </form>
                             </li>
@@ -111,16 +111,16 @@
                                 </div>
                                 <form class="panel">
                                     <ul>
-                                        <li><input type="checkbox" name="debris">Bacon</li>
-                                        <li><input type="checkbox" name="debris">Gravy</li>
-                                        <li><input type="checkbox" name="debris">Chili</li>
-                                        <li><input type="checkbox" name="debris">Nacho Cheese</li>
-                                        <li><input type="checkbox" name="debris">Shredded Cheese</li>
-                                        <li><input type="checkbox" name="debris">Cheese Curds</li>
-                                        <li><input type="checkbox" name="debris">Butter</li>
-                                        <li><input type="checkbox" name="debris">Scallions</li>
-                                        <li><input type="checkbox" name="debris">Veggie Mix</li>
-                                        <li><input type="checkbox" name="debris">Sour Cream</li>
+                                        <li><input type="checkbox" name="debris" value="Bacon" v-model="soloMission.debris">Bacon</li>
+                                        <li><input type="checkbox" name="debris" value="Gravy" v-model="soloMission.debris">Gravy</li>
+                                        <li><input type="checkbox" name="debris" value="Chili" v-model="soloMission.debris">Chili</li>
+                                        <li><input type="checkbox" name="debris" value="Nacho Cheese" v-model="soloMission.debris">Nacho Cheese</li>
+                                        <li><input type="checkbox" name="debris" value="Shredded Cheese" v-model="soloMission.debris">Shredded Cheese</li>
+                                        <li><input type="checkbox" name="debris" value="Cheese Curds" v-model="soloMission.debris">Cheese Curds</li>
+                                        <li><input type="checkbox" name="debris" value="Butter" v-model="soloMission.debris">Butter</li>
+                                        <li><input type="checkbox" name="debris" value="Scallions" v-model="soloMission.debris">Scallions</li>
+                                        <li><input type="checkbox" name="debris" value="Veggie Mix" v-model="soloMission.debris">Veggie Mix</li>
+                                        <li><input type="checkbox" name="debris" value="Sour Cream" v-model="soloMission.debris">Sour Cream</li>
                                     </ul>
                                 </form>
                             </li>
@@ -131,11 +131,11 @@
                                 </div>
                                 <form class="panel">
                                     <ul>
-                                        <li><input type="checkbox" name="blast">Mustard</li>
-                                        <li><input type="checkbox" name="blast">Hot Sauce</li>
-                                        <li><input type="checkbox" name="blast">BBQ Sauce</li>
-                                        <li><input type="checkbox" name="blast">Honey Mustard</li>
-                                        <li><input type="checkbox" name="blast">Chipotle Mayo</li>
+                                        <li><input type="checkbox" name="blast" value="Mustard" v-model="soloMission.blast">Mustard</li>
+                                        <li><input type="checkbox" name="blast" value="Hot Sauce" v-model="soloMission.blast">Hot Sauce</li>
+                                        <li><input type="checkbox" name="blast" value="BBQ Sauce" v-model="soloMission.blast">BBQ Sauce</li>
+                                        <li><input type="checkbox" name="blast" value="Honey Mustard" v-model="soloMission.blast">Honey Mustard</li>
+                                        <li><input type="checkbox" name="blast" value="Chipotle Mayo" v-model="soloMission.blast">Chipotle Mayo</li>
                                     </ul>
                                 </form>
                             </li>
@@ -147,14 +147,14 @@
                         <p>$0.49</p>
                         <form>
                             <ul>
-                                <li><input type="radio" name="fuel">Bottled Water</li>
-                                <li><input type="radio" name="fuel">Pepsi</li>
-                                <li><input type="radio" name="fuel">Diet Pepsi</li>
-                                <li><input type="radio" name="fuel">Pepsi Zero Sugar</li>
-                                <li><input type="radio" name="fuel">Pepsi Wild Cherry</li>
-                                <li><input type="radio" name="fuel">Mountain Due</li>
-                                <li><input type="radio" name="fuel">Diet Mountain Due</li>
-                                <li><input type="radio" name="fuel">Root Beer</li>
+                                <li><input type="radio" name="fuel" value="Bottled Water" v-model="fuel">Bottled Water</li>
+                                <li><input type="radio" name="fuel" value="Pepsi" v-model="fuel">Pepsi</li>
+                                <li><input type="radio" name="fuel" value="Diet Pepsi" v-model="fuel">Diet Pepsi</li>
+                                <li><input type="radio" name="fuel" value="Pepsi Zero Sugar" v-model="fuel">Pepsi Zero Sugar</li>
+                                <li><input type="radio" name="fuel" value="Pepsi Wild Cherry" v-model="fuel">Pepsi Wild Cherry</li>
+                                <li><input type="radio" name="fuel" value="Mountain Due" v-model="fuel">Mountain Due</li>
+                                <li><input type="radio" name="fuel" value="Diet Mountain Due" v-model="fuel">Diet Mountain Due</li>
+                                <li><input type="radio" name="fuel" value="Root Beer" v-model="fuel">Root Beer</li>
                             </ul>
                         </form>
                         <a @click="addToCart">ADD TO CART</a>
@@ -181,7 +181,7 @@
                 <section>
                     <h2>Total Price</h2>
                     <p>${{totalPrice}}</p>
-                    <a>CHECT OUT</a>
+                    <a>CHECK OUT</a>
                 </section>
             </div>
         </main>
