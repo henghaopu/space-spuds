@@ -10,12 +10,12 @@
 <body>
     <div id="root">
         <header>
-            <a @click="showMenu"><img src="images/space-spuds-logo.svg" alt="Space Spuds Logo"></a>
+            <a href="" @click.prevent="showMenu"><img src="images/space-spuds-logo.svg" alt="Space Spuds Logo"></a>
             <!-- credt -->
             <div style="display:none;">image made by Nicole Barry<a href="https://drive.google.com/open?id=1wHf18e0dkOE6ATDlqhlA9vZ4NHfdyFpV" title="logo image source"></a></div>
             <div>
                 <a @click="showCart" v-cloak>{{shoppingCartCounter}}</a>
-                <a><img @click="showCart" src="images/cart-of-ecommerce.svg" alt="Shopping Cart"></a>
+                <a href="" @click.prevent="showCart"><img src="images/cart-of-ecommerce.svg" alt="Shopping Cart"></a>
                 <!-- credt -->
                 <div style="display:none;">Icons made by<a href="https://www.flaticon.com/authors/designerz-base" title="Designerz Base">Designerz Base</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
             </div>
@@ -32,7 +32,7 @@
                             <li>Gravy</li>
                             <li>Cheese Curds</li>
                         </ul>
-                        <a @click="addToCart">ADD TO CART</a>
+                        <a href="" @click.prevent="addToCart">ADD TO CART</a>
                         <img src="images/plutine.jpg" alt="Plutine">
                         <!-- credt -->
                         <div style="display:none;">image made by Rachel Futterman<a href="https://drive.google.com/open?id=13NJDOKKJx0uoen8OgW5tLhLo5yE9LMzG" title="Plutine image source"></a></div>
@@ -45,7 +45,7 @@
                             <li>Nocho Cheese</li>
                             <li>Bacon</li>
                         </ul>
-                        <a @click="addToCart">ADD TO CART</a>
+                        <a href="" @click.prevent="addToCart">ADD TO CART</a>
                         <img src="images/astrotots.jpg" alt="Astrotots">
                         <!-- credt -->
                         <div style="display:none;">image made by Rachel Futterman<a href="https://drive.google.com/file/d/1z4qgNEEowjBuB-mTnX3MMy_afik49A1G/view?usp=sharing" title="Astrotots image source"></a></div>
@@ -58,7 +58,7 @@
                             <li>Chili</li>
                             <li>Sour Cream</li>
                         </ul>
-                        <a @click="addToCart">ADD TO CART</a>
+                        <a href="" @click.prevent="addToCart">ADD TO CART</a>
                         <img src="images/meateor.jpg" alt="Meateor">
                         <!-- credt -->
                         <div style="display:none;">image made by Rachel Futterman<a href="https://drive.google.com/open?id=1CEauVV3kP0nwrKRxiaTY3TJZ0z2wOlj4" title="Meateor image source"></a></div>
@@ -72,7 +72,7 @@
                             <li>Sour Cream</li>
                             <li>Scallions</li>
                         </ul>
-                        <a @click="addToCart">ADD TO CART</a>
+                        <a href="" @click.prevent="addToCart">ADD TO CART</a>
                         <img src="images/spudnik.jpg" alt="Spudnik">
                         <!-- credt -->
                         <div style="display:none;">image made by Rachel Futterman<a href="https://drive.google.com/open?id=1lY0JNIYHAlbtJZtajnHnYaLX5KP1_1UD" title="Spudnik image source"></a></div>
@@ -142,7 +142,7 @@
                                 </form>
                             </li>
                         </ul>
-                        <a @click="addToCart">ADD TO CART</a>
+                        <a href="" @click.prevent="addToCart">ADD TO CART</a>
                     </section> 
                     <section>
                         <h2>Rocket Fuel</h2>
@@ -159,7 +159,7 @@
                                 <li><input type="radio" name="fuel" value="Brisk Iced Tea" v-model="fuel">Brisk Iced Tea</li>
                             </ul>
                         </form>
-                        <a @click="addToCart">ADD TO CART</a>
+                        <a href="" @click.prevent="addToCart">ADD TO CART</a>
                     </section> 
                 </div>     
             </div>
@@ -183,17 +183,17 @@
                 <section>
                     <h2>Total Price</h2>
                     <p>${{totalPrice}}</p>
-                    <a>CHECK OUT</a>
+                    <a href="">CHECK OUT</a>
                 </section>
             </div>
         </main>
     </div>
 
     <footer>
-        <p>Menu &copy; Students in ART 317 and 517</p>
-        <p>Logo &copy; Nicole Barry</p>
-        <p>Meals &copy; Rachel Futterman</p>
-        <p>Design and Development &copy; Heng-Hao Pu</p>
+        <p>Content - Menu &copy; Students in ART 317 and 517</p>
+        <p>Illustration - Logo &copy; Nicole Barry</p>
+        <p>Illustration - Meals &copy; Rachel Futterman</p>
+        <p>Web Design and Development &copy; Heng-Hao Pu</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
