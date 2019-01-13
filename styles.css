@@ -171,15 +171,6 @@ section img + a {
     text-decoration: none;
 }
 
-#root > header > a + a {
-    position: absolute;
-    text-decoration: none;
-    left: 13px;
-    top: -5px;
-    font-size: 0.3rem;
-    color: lightgray;
-}
-
 #root > header > div:nth-child(4) > a:nth-child(3) {
     position: absolute;
     width: 100px;
@@ -273,4 +264,9 @@ td input {
     border: 1px solid lightsteelblue;
     text-indent: 2px;
     width: 70px;
+}
+
+footer {
+    margin: 0 0.7rem 0.7rem 0.7rem;
+    font-size: 13px;
 }
